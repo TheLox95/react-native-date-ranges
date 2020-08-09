@@ -125,7 +125,7 @@ export default class ComposePicker extends Component {
     const { customButton } = this.props;
 
     if (customButton) {
-      return customButton(this.onConfirm);
+      return customButton(this.onConfirm, () => this.setModalVisible(false));
     }
     return (
       <TouchableHighlight
